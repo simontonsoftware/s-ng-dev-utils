@@ -1,16 +1,15 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { SNgTestUtilsComponent } from './s-ng-test-utils.component';
+import { SNgTestUtilsComponent } from "./s-ng-test-utils.component";
 
-describe('SNgTestUtilsComponent', () => {
+describe("SNgTestUtilsComponent", () => {
   let component: SNgTestUtilsComponent;
   let fixture: ComponentFixture<SNgTestUtilsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SNgTestUtilsComponent ]
-    })
-    .compileComponents();
+      declarations: [SNgTestUtilsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +18,7 @@ describe('SNgTestUtilsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

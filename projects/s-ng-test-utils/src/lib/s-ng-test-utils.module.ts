@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { SNgTestUtilsComponent } from './s-ng-test-utils.component';
+import { NgModule } from "@angular/core";
+import { SNgTestUtilsComponent } from "./s-ng-test-utils.component";
 
 @NgModule({
   declarations: [SNgTestUtilsComponent],
-  imports: [
-  ],
-  exports: [SNgTestUtilsComponent]
+  imports: [],
+  exports: [SNgTestUtilsComponent],
 })
-export class SNgTestUtilsModule { }
+export class SNgTestUtilsModule {}
