@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "docs": "cd docs && typedoc ../projects/s-ng-test-utils/src/lib",
-    "prettier-all": "prettier --write \"**/*.{html,js,json,md,scss,ts,yml}\""
+    "prettier-all": "prettier --write \"**/*.{html,js,json,md,scss,ts,yml}\"",
+    "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build s-ng-test-utils"
   },
   "private": true,
   "dependencies": {
@@ -35,6 +36,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "@types/prettier": "^1.16.2",
     "codelyzer": "~4.5.0",
     "coveralls": "^3.0.3",
     "jasmine-core": "~2.99.1",
@@ -47,6 +49,7 @@
     "ng-packagr": "^4.2.0",
     "prettier": "^1.17.0",
     "protractor": "~5.4.0",
+    "standard-version": "^5.0.2",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.0",
@@ -57,5 +60,12 @@
   "prettier": {
     "trailingComma": "all",
     "arrowParens": "always"
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" standard-version-postbump",
+      "postchangelog": "prettier --write CHANGELOG.md",
+      "precommit": "git add projects/s-ng-test-utils/package.json"
+    }
   }
 }
