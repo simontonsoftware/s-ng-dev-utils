@@ -273,6 +273,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
+    <property name="javascript.karma.karma_node_package_dir" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/s-ng-test-utils/src/lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -310,7 +311,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="npm.Lib Build">
+  <component name="RunManager" selected="Karma.Integration Tests">
     <configuration name="singleCall matcher" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="$PROJECT_DIR$/projects/s-ng-test-utils/karma.conf.js" />
       <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
@@ -346,9 +347,9 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="Karma.Integration Tests" />
       <item itemvalue="Karma.Lib Tests" />
       <item itemvalue="Karma.singleCall matcher" />
-      <item itemvalue="npm.Integration Tests" />
       <item itemvalue="npm.Lib Build" />
       <item itemvalue="npm.Angular CLI Server" />
       <item itemvalue="Protractor.E2E Tests" />
