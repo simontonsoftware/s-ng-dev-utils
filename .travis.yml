@@ -1,0 +1,31 @@
+dist: trusty
+sudo: false
+
+language: node_js
+node_js:
+  - "8"
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
+cache:
+  directories:
+    - ./node_modules
+
+install:
+  - yarn
+
+script:
+  - yarn test s-ng-test-utils --code-coverage --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - yarn build s-ng-test-utils --prod
+  - yarn test s-ng-test-utils-platform --watch=false --progress=false --browsers=ChromeHeadlessCI
+
+after_success:
+  - cat coverage/lcov.info | node_modules/coveralls/bin/coveralls.js
+
+notifications:
+  email: false
