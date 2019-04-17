@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9ebbfa5c-2f12-4cad-98f2-c3d45c194173" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Integration_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Lib_Build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Lib_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/s-ng-test-utils/src/lib/expect-single-call-and-reset.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/projects/s-ng-test-utils/src/lib/expect-single-call-and-reset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/integration.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/s-ng-test-utils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/s-ng-test-utils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/s-ng-test-utils/src/public-api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/projects/s-ng-test-utils/src/public-api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projects/s-ng-test-utils/tsconfig.lib.json" beforeDir="false" afterPath="$PROJECT_DIR$/projects/s-ng-test-utils/tsconfig.lib.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tslint.json" beforeDir="false" afterPath="$PROJECT_DIR$/tslint.json" afterDir="false" />
-    </list>
+    <list default="true" id="9ebbfa5c-2f12-4cad-98f2-c3d45c194173" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/dist/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,18 +24,6 @@
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="119">
                       <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-                    </state>
-                  </provider>
-                </entry>
-              </file>
-              <file pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/src/app/app.component.spec.ts">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="34">
-                      <caret line="2" selection-start-line="2" selection-end-line="2" />
-                      <folding>
-                        <element signature="e#0#55#0" expanded="true" />
-                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -90,7 +66,11 @@
               </file>
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/tsconfig.json">
-                  <provider selected="true" editor-type-id="text-editor" />
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="357">
+                      <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                    </state>
+                  </provider>
                 </entry>
               </file>
             </leaf>
@@ -211,23 +191,6 @@
             <path>
               <item name="s-ng-test-utils" type="b2602c69:ProjectViewProjectNode" />
               <item name="s-ng-test-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="s-ng-test-utils-platform" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="s-ng-test-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="s-ng-test-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="e2e" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="s-ng-test-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="s-ng-test-utils" type="462c0819:PsiDirectoryNode" />
-              <item name="e2e" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="s-ng-test-utils" type="b2602c69:ProjectViewProjectNode" />
-              <item name="s-ng-test-utils" type="462c0819:PsiDirectoryNode" />
               <item name="projects" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -274,7 +237,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="javascript.karma.karma_node_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/projects/s-ng-test-utils/src/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -368,7 +331,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555381364694</updated>
       <workItem from="1555381366146" duration="987000" />
-      <workItem from="1555382381950" duration="7541000" />
+      <workItem from="1555382381950" duration="7847000" />
     </task>
     <task id="LOCAL-00001" summary="jetbrains config">
       <created>1555381402462</created>
@@ -426,13 +389,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555382615042</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="feat: add `expectSingleCallAndReset()`">
+      <created>1555460285029</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1555460285029</updated>
+    </task>
+    <task id="LOCAL-00010" summary="chore: set up integration tests">
+      <created>1555460392412</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1555460392412</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2019.04.16 at 19h 41m 10s.xml">
-      <configuration name="Tests" configurationId="JavaScriptTestRunnerKarma" />
-    </history-entry>
     <history-entry file="singleCall_matcher - 2019.04.16 at 19h 41m 33s.xml">
       <configuration name="singleCall matcher" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
@@ -460,26 +434,29 @@
     <history-entry file="Integration_Tests - 2019.04.16 at 20h 12m 29s.xml">
       <configuration name="Integration Tests" configurationId="JavaScriptTestRunnerKarma" />
     </history-entry>
+    <history-entry file="Integration_Tests - 2019.04.16 at 20h 18m 59s.xml">
+      <configuration name="Integration Tests" configurationId="JavaScriptTestRunnerKarma" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8528000" />
+    <option name="totallyTimeSpent" value="8834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-8" width="2512" height="1096" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.112561174" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.112561174" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986213" visible="true" weight="0.32917964" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986213" weight="0.3997923" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986213" weight="0.32917964" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49816176" weight="0.3997923" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4990809" weight="0.32917964" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" sideWeight="0.4986213" visible="true" weight="0.32917964" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.50137866" side_tool="true" visible="true" weight="0.32917964" />
@@ -552,7 +529,9 @@
     <MESSAGE value="chore: `yarn prettier-all`" />
     <MESSAGE value="chore: make prettier and tslint play nice" />
     <MESSAGE value="chore: remove scaffolded library code" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: remove scaffolded library code" />
+    <MESSAGE value="feat: add `expectSingleCallAndReset()`" />
+    <MESSAGE value="chore: set up integration tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: set up integration tests" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.prettierignore">
@@ -719,7 +698,11 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tsconfig.json">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/integration.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
