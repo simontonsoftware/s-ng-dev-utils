@@ -2,6 +2,9 @@
   "extends": "tslint:recommended",
   "rulesDirectory": ["codelyzer"],
   "rules": {
+    //
+    // from the angular cli
+    //
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -10,7 +13,7 @@
     "import-blacklist": [true, "rxjs/Rx"],
     "interface-name": false,
     "max-classes-per-file": false,
-    // "max-line-length": [true, 140], done by prettier
+    // "max-line-length": [true, 140], handled by prettier
     "member-access": false,
     "member-ordering": [
       true,
@@ -35,8 +38,8 @@
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    // "quotemark": [true, "single"], done by prettier
-    // "trailing-comma": false, done by prettier
+    // "quotemark": [true, "single"], handled by prettier
+    // "trailing-comma": false, handled by prettier
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
@@ -46,6 +49,11 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+
+    //
+    // handled by prettier
+    //
+    "max-line-length": false
   }
 }
