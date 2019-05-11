@@ -4,8 +4,8 @@
   "author": "Simonton Software",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
-    "jasmine-core": "~2.99.1"
+    "@angular/common": "^8.0.0-rc.2",
+    "@angular/core": "^8.0.0-rc.2",
+    "jasmine-core": "~3.4.0"
   }
 }

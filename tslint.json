@@ -1,6 +1,5 @@
 {
   "extends": "tslint:recommended",
-  "rulesDirectory": ["codelyzer"],
   "rules": {
     //
     // from the angular cli
@@ -10,6 +9,11 @@
     "deprecation": {
       "severity": "warn"
     },
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
+    "directive-selector": [true, "attribute", "app", "camelCase"],
+    "component-selector": [true, "element", "app", "kebab-case"],
     "import-blacklist": [true, "rxjs/Rx"],
     "interface-name": false,
     "max-classes-per-file": false,
@@ -39,21 +43,24 @@
     "object-literal-sort-keys": false,
     "ordered-imports": false,
     // "quotemark": [true, "single"], handled by prettier
-    // "trailing-comma": false, handled by prettier
-    "no-output-on-prefix": true,
-    "use-input-property-decorator": true,
-    "use-output-property-decorator": true,
-    "use-host-property-decorator": true,
+    "trailing-comma": false,
+    "no-conflicting-lifecycle": true,
+    "no-host-metadata-property": true,
     "no-input-rename": true,
+    "no-inputs-metadata-property": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
     "no-output-rename": true,
-    "use-life-cycle-interface": true,
+    "no-outputs-metadata-property": true,
+    "template-banana-in-box": true,
+    "template-no-negated-async": true,
+    "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
-    "component-class-suffix": true,
-    "directive-class-suffix": true,
 
     //
     // handled by prettier
     //
     "max-line-length": false
-  }
+  },
+  "rulesDirectory": ["codelyzer"]
 }
