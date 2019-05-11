@@ -48,14 +48,11 @@
     "ng-packagr": "^5.1.0",
     "prettier": "^1.17.0",
     "protractor": "~5.4.0",
-    "standard-version": "^5.0.2",
+    "standard-version": "^6.0.1",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typedoc": "^0.14.2",
     "typescript": "~3.4.3"
-  },
-  "resolutions": {
-    "conventional-changelog": "^1.0.0"
   },
   "prettier": {
     "trailingComma": "all",
