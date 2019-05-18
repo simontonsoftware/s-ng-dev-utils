@@ -3,3 +3,4 @@
  */
 
 export { expectSingleCallAndReset } from "./lib/expect-single-call-and-reset";
+export * from "./lib/utility-types";
