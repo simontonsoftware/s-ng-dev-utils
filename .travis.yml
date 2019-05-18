@@ -20,12 +20,12 @@ install:
   - yarn
 
 script:
-  - yarn test s-ng-test-utils --code-coverage --watch=false --progress=false --browsers=ChromeHeadlessCI
-  - yarn build s-ng-test-utils
-  - yarn test s-ng-test-utils-platform --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - yarn test s-ng-dev-utils --code-coverage --watch=false --progress=false --browsers=ChromeHeadlessCI
+  - yarn build s-ng-dev-utils
+  - yarn test s-ng-dev-utils-platform --watch=false --progress=false --browsers=ChromeHeadlessCI
 
 after_success:
-  - cat coverage/s-ng-test-utils/lcov.info | node_modules/coveralls/bin/coveralls.js
+  - cat coverage/s-ng-dev-utils/lcov.info | node_modules/coveralls/bin/coveralls.js
 
 notifications:
   email: false

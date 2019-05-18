@@ -1,6 +1,6 @@
-import { expectSingleCallAndReset } from "s-ng-test-utils";
+import { expectSingleCallAndReset } from "s-ng-dev-utils";
 
-describe("s-ng-test-utils", () => {
+describe("s-ng-dev-utils", () => {
   it("has expectSingleCallAndReset()", () => {
     const spy = jasmine.createSpy();
     spy();

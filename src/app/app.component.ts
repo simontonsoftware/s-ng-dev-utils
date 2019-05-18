@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = "s-ng-test-utils-platform";
+  title = "s-ng-dev-utils-platform";
 }

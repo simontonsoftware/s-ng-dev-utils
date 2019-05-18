@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "s-ng-test-utils-platform": {
+    "s-ng-dev-utils-platform": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/s-ng-test-utils-platform",
+            "outputPath": "dist/s-ng-dev-utils-platform",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -56,18 +56,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "s-ng-test-utils-platform:build"
+            "browserTarget": "s-ng-dev-utils-platform:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "s-ng-test-utils-platform:build:production"
+              "browserTarget": "s-ng-dev-utils-platform:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "s-ng-test-utils-platform:build"
+            "browserTarget": "s-ng-dev-utils-platform:build"
           }
         },
         "test": {
@@ -97,43 +97,43 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "s-ng-test-utils-platform:serve"
+            "devServerTarget": "s-ng-dev-utils-platform:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "s-ng-test-utils-platform:serve:production"
+              "devServerTarget": "s-ng-dev-utils-platform:serve:production"
             }
           }
         }
       }
     },
-    "s-ng-test-utils": {
+    "s-ng-dev-utils": {
       "projectType": "library",
-      "root": "projects/s-ng-test-utils",
-      "sourceRoot": "projects/s-ng-test-utils/src",
+      "root": "projects/s-ng-dev-utils",
+      "sourceRoot": "projects/s-ng-dev-utils/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/s-ng-test-utils/tsconfig.lib.json",
-            "project": "projects/s-ng-test-utils/ng-package.json"
+            "tsConfig": "projects/s-ng-dev-utils/tsconfig.lib.json",
+            "project": "projects/s-ng-dev-utils/ng-package.json"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/s-ng-test-utils/src/test.ts",
-            "tsConfig": "projects/s-ng-test-utils/tsconfig.spec.json",
-            "karmaConfig": "projects/s-ng-test-utils/karma.conf.js"
+            "main": "projects/s-ng-dev-utils/src/test.ts",
+            "tsConfig": "projects/s-ng-dev-utils/tsconfig.spec.json",
+            "karmaConfig": "projects/s-ng-dev-utils/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/s-ng-test-utils/tsconfig.lib.json",
-              "projects/s-ng-test-utils/tsconfig.spec.json"
+              "projects/s-ng-dev-utils/tsconfig.lib.json",
+              "projects/s-ng-dev-utils/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
@@ -141,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "s-ng-test-utils-platform"
+  "defaultProject": "s-ng-dev-utils-platform"
 }

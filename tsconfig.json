@@ -15,8 +15,8 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "s-ng-test-utils": ["dist/s-ng-test-utils"],
-      "s-ng-test-utils/*": ["dist/s-ng-test-utils/*"]
+      "s-ng-dev-utils": ["dist/s-ng-dev-utils"],
+      "s-ng-dev-utils/*": ["dist/s-ng-dev-utils/*"]
     }
   }
 }

@@ -1,11 +1,11 @@
 {
-  "extends": "../projects/s-ng-test-utils/tsconfig.lib.json",
+  "extends": "../projects/s-ng-dev-utils/tsconfig.lib.json",
   "compilerOptions": {
     "outDir": "build",
     "target": "es5"
   },
   "typedocOptions": {
-    "name": "s-ng-test-utils",
+    "name": "s-ng-dev-utils",
     "mode": "file",
     "out": "typedoc",
     "module": "commonjs",

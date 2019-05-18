@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/s-ng-test-utils.iml" filepath="$PROJECT_DIR$/.idea/s-ng-test-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/s-ng-dev-utils.iml" filepath="$PROJECT_DIR$/.idea/s-ng-dev-utils.iml" />
     </modules>
   </component>
 </project>

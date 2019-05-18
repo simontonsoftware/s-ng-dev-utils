@@ -1,5 +1,5 @@
 {
-  "name": "s-ng-test-utils-platform",
+  "name": "s-ng-dev-utils-platform",
   "version": "0.2.0",
   "scripts": {
     "ng": "ng",
@@ -8,9 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "docs": "cd docs && typedoc ../projects/s-ng-test-utils/src/lib",
+    "docs": "cd docs && typedoc ../projects/s-ng-dev-utils/src/lib",
     "prettier-all": "prettier --write \"**/*.{html,js,json,md,scss,ts,yml}\"",
-    "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build s-ng-test-utils"
+    "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build s-ng-dev-utils"
   },
   "private": true,
   "dependencies": {
@@ -62,7 +62,7 @@
     "scripts": {
       "postbump": "ts-node -O \"{\\\"module\\\": \\\"commonjs\\\"}\" standard-version-postbump",
       "postchangelog": "prettier --write CHANGELOG.md",
-      "precommit": "git add projects/s-ng-test-utils/package.json"
+      "precommit": "git add projects/s-ng-dev-utils/package.json"
     }
   }
 }

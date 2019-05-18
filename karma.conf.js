@@ -18,7 +18,7 @@ module.exports = function(config) {
     coverageIstanbulReporter: {
       dir: require("path").join(
         __dirname,
-        "./coverage/s-ng-test-utils-platform",
+        "./coverage/s-ng-dev-utils-platform",
       ),
       reports: ["html", "lcovonly", "text-summary"],
       fixWebpackSourcePaths: true,

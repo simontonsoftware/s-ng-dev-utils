@@ -1,7 +1,7 @@
 import { writeFileSync } from "fs";
 import { format } from "prettier";
 
-const projectName = "s-ng-test-utils";
+const projectName = "s-ng-dev-utils";
 
 const packageJson = require("./package.json");
 const libPackageJson = require(`./projects/${projectName}/package.json`);
