@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "postbuild": "cpx tslint*.json dist/s-ng-dev-utils/",
+    "postbuild": "cpx \"tslint*.json\" dist/s-ng-dev-utils/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
