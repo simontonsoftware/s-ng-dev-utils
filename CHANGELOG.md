@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.3.0...v0.4.0) (2019-05-18)
+
+### Features
+
+- add utility types ([9b47c9a](https://github.com/simontonsoftware/s-ng-dev-utils/commit/9b47c9a))
+
 ## [0.3.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.2.0...v0.3.0) (2019-05-18)
 
 ### Features
