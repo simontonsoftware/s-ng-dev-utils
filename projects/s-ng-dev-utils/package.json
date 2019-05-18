@@ -1,6 +1,6 @@
 {
   "name": "s-ng-dev-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "author": "Simonton Software",
   "license": "MIT",
   "peerDependencies": {
@@ -8,7 +8,5 @@
     "@angular/core": "^8.0.0-rc.2",
     "jasmine-core": "~3.4.0"
   },
-  "dependencies": {
-    "tslint-config-prettier": "^1.18.0"
-  }
+  "dependencies": { "tslint-config-prettier": "^1.18.0" }
 }

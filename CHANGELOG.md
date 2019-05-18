@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.2.0...v0.3.0) (2019-05-18)
+
+### Features
+
+- Expand project concept to any dev-only dependencies ([357afb8](https://github.com/simontonsoftware/s-ng-dev-utils/commit/357afb8))
+- publish a tslint config ([258828c](https://github.com/simontonsoftware/s-ng-dev-utils/commit/258828c))
+
+### BREAKING CHANGES
+
+- name changed to `s-ng-dev-utils`
+
 ## [0.2.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.1.0...v0.2.0) (2019-05-11)
 
 ### chore
