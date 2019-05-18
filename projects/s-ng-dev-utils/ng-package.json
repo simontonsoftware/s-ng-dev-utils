@@ -3,5 +3,6 @@
   "dest": "../../dist/s-ng-dev-utils",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["tslint-config-prettier"]
 }

@@ -1,66 +1,25 @@
 {
-  "extends": "tslint:recommended",
+  "extends": ["./tslint.angularcli.json", "tslint-config-prettier"],
   "rules": {
-    //
-    // from the angular cli
-    //
-    "array-type": false,
-    "arrow-parens": false,
-    "deprecation": {
-      "severity": "warn"
+    // the same as tslint:recommended, but without "Function"
+    "ban-types": {
+      "options": [
+        ["Object", "Avoid using the `Object` type. Did you mean `object`?"],
+        ["Boolean", "Avoid using the `Boolean` type. Did you mean `boolean`?"],
+        ["Number", "Avoid using the `Number` type. Did you mean `number`?"],
+        ["String", "Avoid using the `String` type. Did you mean `string`?"],
+        ["Symbol", "Avoid using the `Symbol` type. Did you mean `symbol`?"]
+      ]
     },
-    "component-class-suffix": true,
-    "contextual-lifecycle": true,
-    "directive-class-suffix": true,
-    "directive-selector": [true, "attribute", "app", "camelCase"],
-    "component-selector": [true, "element", "app", "kebab-case"],
-    "import-blacklist": [true, "rxjs/Rx"],
-    "interface-name": false,
-    "max-classes-per-file": false,
-    // "max-line-length": [true, 140], handled by prettier
-    "member-access": false,
-    "member-ordering": [
-      true,
-      {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
-      }
-    ],
-    "no-consecutive-blank-lines": false,
-    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
-    "no-empty": false,
-    "no-inferrable-types": [true, "ignore-params"],
-    "no-non-null-assertion": true,
-    "no-redundant-jsdoc": true,
-    "no-switch-case-fall-through": true,
-    "no-use-before-declare": true,
-    "no-var-requires": false,
-    "object-literal-key-quotes": [true, "as-needed"],
-    "object-literal-sort-keys": false,
-    "ordered-imports": false,
-    // "quotemark": [true, "single"], handled by prettier
-    "trailing-comma": false,
-    "no-conflicting-lifecycle": true,
-    "no-host-metadata-property": true,
-    "no-input-rename": true,
-    "no-inputs-metadata-property": true,
-    "no-output-native": true,
-    "no-output-on-prefix": true,
-    "no-output-rename": true,
-    "no-outputs-metadata-property": true,
-    "template-banana-in-box": true,
-    "template-no-negated-async": true,
-    "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true,
-
-    //
-    // handled by prettier
-    //
-    "max-line-length": false
-  },
-  "rulesDirectory": ["codelyzer"]
+    "no-non-null-assertion": { "severity": "warning" },
+    // the same as tslint:recommended, but with "allow-leading-underscore"
+    "variable-name": {
+      "options": [
+        "ban-keywords",
+        "check-format",
+        "allow-pascal-case",
+        "allow-leading-underscore"
+      ]
+    }
+  }
 }

@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "postbuild": "cpx tslint*.json dist/s-ng-dev-utils/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
@@ -24,6 +25,7 @@
     "@angular/router": "~8.0.0-rc.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
+    "tslint-config-prettier": "^1.18.0",
     "zone.js": "~0.9.0"
   },
   "devDependencies": {
@@ -38,6 +40,7 @@
     "@types/prettier": "^1.16.2",
     "codelyzer": "~5.0.0",
     "coveralls": "^3.0.3",
+    "cpx": "^1.5.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
