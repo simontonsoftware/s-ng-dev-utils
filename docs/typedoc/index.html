@@ -1110,13 +1110,28 @@ expectSingleCallAndReset(spy, <span class="hljs-number">3</span>); <span class="
 				<a name="expecttype" class="tsd-anchor"></a>
 				<h3>expect<wbr>Type</h3>
 				<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-					<li class="tsd-signature tsd-kind-icon">expect<wbr>Type&lt;T&gt;<span class="tsd-signature-symbol">(</span>_value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">expect<wbr>Type&lt;Expected, Actual&gt;<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">expect<wbr>Type&lt;Expected&gt;<span class="tsd-signature-symbol">(</span>value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Expected</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/expect-type.ts#L1">expect-type.ts:1</a></li>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/expect-type.ts#L10">expect-type.ts:10</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Use this in tests to do some limited type assertions.</p>
+							</div>
+							<pre><code class="language-ts">expectType&lt;<span class="hljs-built_in">number</span>&gt;(performance.now());
+expectType&lt;<span class="hljs-built_in">string</span>, NodeJS.Platform&gt;();</code></pre>
+						</div>
+					</li>
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/expect-type.ts#L11">expect-type.ts:11</a></li>
 							</ul>
 						</aside>
 					</li>

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.6.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.5.0...v0.6.0) (2019-05-19)
+
+### Features
+
+- `expectType()` can now compare 2 types against each other ([3f8dfa1](https://github.com/simontonsoftware/s-ng-dev-utils/commit/3f8dfa1))
+
 ## [0.5.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.4.0...v0.5.0) (2019-05-18)
 
 ### Features
