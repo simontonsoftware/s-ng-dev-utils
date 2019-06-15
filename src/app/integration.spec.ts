@@ -8,6 +8,7 @@ import {
   Function2,
   Function3,
   Function4,
+  marbleTest,
   Nil,
   NumberKeyedObject,
   ObjectWith,
@@ -25,6 +26,13 @@ describe("s-ng-dev-utils", () => {
   it("has expectType()", () => {
     expectType<number>(0);
   });
+
+  it(
+    "has marbleTest",
+    marbleTest(({ cold, expectObservable }) => {
+      expectObservable(cold("|")).toBe("|");
+    }),
+  );
 
   it("has utility types", () => {
     expectType<Primitive>(9);
