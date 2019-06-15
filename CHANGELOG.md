@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.6.0...v0.7.0) (2019-06-15)
+
+### Features
+
+- add `expectCallsAndReset()` ([75cd373](https://github.com/simontonsoftware/s-ng-dev-utils/commit/75cd373))
+- add `marbleTest()` ([0e57148](https://github.com/simontonsoftware/s-ng-dev-utils/commit/0e57148))
+
 ## [0.6.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.5.0...v0.6.0) (2019-05-19)
 
 ### Features
