@@ -1,5 +1,6 @@
 import {
   Existant,
+  expectCallsAndReset,
   expectSingleCallAndReset,
   expectType,
   Falsey,
@@ -17,6 +18,12 @@ import {
 } from "s-ng-dev-utils";
 
 describe("s-ng-dev-utils", () => {
+  it("has expectCallsAndReset()", () => {
+    const spy = jasmine.createSpy();
+    spy();
+    expectCallsAndReset(spy, []);
+  });
+
   it("has expectSingleCallAndReset()", () => {
     const spy = jasmine.createSpy();
     spy();
