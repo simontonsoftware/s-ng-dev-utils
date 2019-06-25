@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.7.0...v0.8.0) (2019-06-25)
+
+### chore
+
+- Remove utility types. ([a6c0f75](https://github.com/simontonsoftware/s-ng-dev-utils/commit/a6c0f75))
+
+### BREAKING CHANGES
+
+- Removes all exported types from this library. They did not fit the spirit of "dev" utils, because they made this library a real dependency of libraries that use it
+
 ## [0.7.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.6.0...v0.7.0) (2019-06-15)
 
 ### Features
