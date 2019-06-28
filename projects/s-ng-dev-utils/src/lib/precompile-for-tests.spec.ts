@@ -1,5 +1,12 @@
-import { Component, Injectable, NgModule } from "@angular/core";
+import {
+  Component,
+  Injectable,
+  NgModule,
+  Pipe,
+  PipeTransform,
+} from "@angular/core";
 import { TestBed } from "@angular/core/testing";
+import { BrowserModule } from "@angular/platform-browser";
 import { precompileForTests } from "./precompile-for-tests";
 
 @Injectable({ providedIn: "root" })
@@ -17,8 +24,16 @@ class ProvidedInComponent {
   counter = 0;
 }
 
+@Pipe({ name: "excited" })
+class ExcitedPipe implements PipeTransform {
+  transform(value: any) {
+    return value.toString() + "!";
+  }
+}
+
 @Component({
-  template: "I exist! Created {{ providedInComponent.counter }} time(s).",
+  template:
+    "{{ 'I exist' | excited }} Created {{ providedInComponent.counter }} time(s).",
   providers: [ProvidedInComponent],
 })
 class AComponent {
@@ -27,46 +42,54 @@ class AComponent {
   }
 }
 
-@NgModule({ declarations: [AComponent], providers: [ProvidedInModule] })
-class AModule {}
+@NgModule({ imports: [BrowserModule] })
+class SecondaryModule {}
+
+@NgModule({
+  imports: [BrowserModule, SecondaryModule],
+  declarations: [AComponent, ExcitedPipe],
+  providers: [ProvidedInModule],
+})
+class MainModule {}
 
 describe("precompileForTests()", () => {
-  precompileForTests([AModule]);
+  precompileForTests([MainModule]);
 
-  async function initFullModule() {
-    TestBed.configureTestingModule({ imports: [AModule] });
+  async function initComponent() {
+    TestBed.configureTestingModule({ imports: [MainModule] });
     await TestBed.compileComponents();
+    const fixture = TestBed.createComponent(AComponent);
+    fixture.detectChanges();
+    return fixture;
   }
 
   /////////
 
   it("allows components", async () => {
-    await initFullModule();
-    const fixture = TestBed.createComponent(AComponent);
+    const fixture = await initComponent();
     expect(fixture.nativeElement.textContent).toContain("I exist!");
   });
 
   it("allows declaring only a component", async () => {
-    TestBed.configureTestingModule({ declarations: [AComponent] });
+    TestBed.configureTestingModule({ declarations: [AComponent, ExcitedPipe] });
     await TestBed.compileComponents();
     const fixture = TestBed.createComponent(AComponent);
+    fixture.detectChanges();
     expect(fixture.nativeElement.textContent).toContain("I exist!");
   });
 
   for (let i = 0; i < 3; ++i) {
     it(`allows clearing service state between tests, iteration ${i}`, async () => {
-      await initFullModule();
+      const fixture = await initComponent();
       const providedInRoot = TestBed.get(ProvidedInRoot);
       const providedInModule = TestBed.get(ProvidedInModule);
-      const fixture = TestBed.createComponent(AComponent);
-      fixture.detectChanges();
-
-      expect(providedInRoot.counter).toBe(0);
-      expect(providedInModule.counter).toBe(0);
-      expect(fixture.nativeElement.textContent).toContain("Created 1 time(s).");
 
       ++providedInRoot.counter;
       ++providedInModule.counter;
+
+      expect(providedInRoot.counter).toBe(1);
+      expect(providedInModule.counter).toBe(1);
+      expect(fixture.nativeElement.textContent).toContain("Created 1 time(s).");
     });
   }
 });

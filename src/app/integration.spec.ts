@@ -3,6 +3,7 @@ import {
   expectSingleCallAndReset,
   expectType,
   marbleTest,
+  precompileForTests,
 } from "s-ng-dev-utils";
 
 describe("s-ng-dev-utils", () => {
@@ -28,4 +29,12 @@ describe("s-ng-dev-utils", () => {
       expectObservable(cold("|")).toBe("|");
     }),
   );
+
+  describe("precompileForTests()", () => {
+    precompileForTests([]);
+
+    it("exists", () => {
+      expect().nothing();
+    });
+  });
 });
