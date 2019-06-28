@@ -12,10 +12,10 @@ yarn add -D s-ng-dev-utils
 
 ## TSLint Config
 
-This library also comes with a predefined `tslint.json` that extends the angular cli's config to disable rules that conflict with Prettier (via [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier)), with these exceptions that Simonton Software has found useful:
+This library also comes with a predefined `tslint.json` that extends the angular cli's config to disable rules that conflict with Prettier (via [tslint-config-prettier](https://github.com/prettier/tslint-config-prettier)), with these exceptions that we have found useful:
 
 - Allows using the `Function` type. Some of our libraries deal a lot with utilities that operate on functions, and using this type is very handy.
-- Allows prefixing variables with `_`. This is useful e.g. when overriding a method in a way that does not use all its parameters. Simonton Software uses typescript's "noUnusedParameters" option, which gives an error with unused parameters unless their names are prefixed with `_`.
+- Allows prefixing variables with `_`. This is useful e.g. when overriding a method in a way that does not use all its parameters. We uses typescript's "noUnusedParameters" option, which gives an error with unused parameters unless their names are prefixed with `_`.
 - Downgrades [no-non-null-assertion](https://palantir.github.io/tslint/rules/no-non-null-assertion/) to a warning. While we believe using `!` should be avoided when reasonable, we find that sometimes it just makes sense.
 
 To use it, change your `tslint.json` to:
