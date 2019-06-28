@@ -1074,7 +1074,7 @@ expectType&lt;<span class="hljs-built_in">string</span>, NodeJS.Platform&gt;();<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L47">precompile-for-tests.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L49">precompile-for-tests.ts:49</a></li>
 							</ul>
 						</aside>
 					</li>
@@ -1090,7 +1090,7 @@ expectType&lt;<span class="hljs-built_in">string</span>, NodeJS.Platform&gt;();<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L57">precompile-for-tests.ts:57</a></li>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L59">precompile-for-tests.ts:59</a></li>
 							</ul>
 						</aside>
 					</li>
@@ -1132,7 +1132,7 @@ expectType&lt;<span class="hljs-built_in">string</span>, NodeJS.Platform&gt;();<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L27">precompile-for-tests.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/precompile-for-tests.ts#L29">precompile-for-tests.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -1141,6 +1141,8 @@ expectType&lt;<span class="hljs-built_in">string</span>, NodeJS.Platform&gt;();<
 							</div>
 							<pre><code class="language-ts"><span class="hljs-comment">// let's assume `AppModule` declares or imports a `HelloWorldComponent`</span>
 precompileForTests([AppModule]);
+
+<span class="hljs-comment">// Everything below here is the same as normal. Just add the line above.</span>
 
 describe(<span class="hljs-string">"AppComponent"</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
   it(<span class="hljs-string">"says hello"</span>, <span class="hljs-keyword">async</span> () =&gt; {

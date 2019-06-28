@@ -12,6 +12,8 @@ import {
  * // let's assume `AppModule` declares or imports a `HelloWorldComponent`
  * precompileForTests([AppModule]);
  *
+ * // Everything below here is the same as normal. Just add the line above.
+ *
  * describe("AppComponent", () => {
  *   it("says hello", async () => {
  *     TestBed.configureTestingModule({ declarations: [HelloWorldComponent] });
