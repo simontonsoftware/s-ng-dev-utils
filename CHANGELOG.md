@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.9.0...v0.10.0) (2019-07-20)
+
+### Features
+
+- add some support for dtslint ([ea19485](https://github.com/simontonsoftware/s-ng-dev-utils/commit/ea19485))
+
 ## [0.9.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.8.0...v0.9.0) (2019-06-28)
 
 ### Features
