@@ -25,3 +25,15 @@ To use it, change your `tslint.json` to:
   "extends": "s-ng-dev-utils/tslint"
 }
 ```
+
+## DTSLint
+
+There are a couple aids in setting up [`dtslint`](https://github.com/microsoft/dtslint)
+
+- It will be installed automatically along with this library.
+- There are some tslint rules that cause problems - disable them by using this as your `tslint.json` file within your type testing directory:
+  ```json
+  {
+    "extends": ["dtslint/dtslint.json", "s-ng-dev-utils/tslint.dtslint.json"]
+  }
+  ```

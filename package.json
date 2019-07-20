@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "dtslint": "dtslint --localTs node_modules/typescript/lib projects/s-ng-dev-utils/src/typing-tests",
     "docs": "cd docs && typedoc ../projects/s-ng-dev-utils/src/lib",
     "prettier-all": "prettier --write \"**/*.{html,js,json,md,scss,ts,yml}\"",
     "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build s-ng-dev-utils"
@@ -23,6 +24,7 @@
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "dtslint": "^0.9.0",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "tslint-config-prettier": "^1.18.0",

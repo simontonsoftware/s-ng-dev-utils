@@ -1,0 +1,18 @@
+{
+  "extends": ["./tslint.json"],
+  "rules": {
+    "no-useless-files": false,
+    "no-object-literal-type-assertion": false,
+
+    // these throw an error
+    "curly": false,
+    "interface-over-type-literal": false,
+    "no-duplicate-variable": false,
+    "no-console": false,
+    "no-arg": false,
+    "one-variable-per-declaration": false,
+
+    // these show an error and I don't know why
+    "no-var-keyword": false
+  }
+}

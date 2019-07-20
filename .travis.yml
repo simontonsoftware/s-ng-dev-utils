@@ -21,6 +21,10 @@ install:
 
 script:
   - yarn test s-ng-dev-utils --code-coverage --watch=false --progress=false --browsers=ChromeHeadlessCI
+
+  - mkdir ~/.dts
+  - yarn dtslint
+
   - yarn build s-ng-dev-utils
   - yarn test s-ng-dev-utils-platform --watch=false --progress=false --browsers=ChromeHeadlessCI
 
