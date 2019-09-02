@@ -8,5 +8,7 @@
     "@angular/core": "^8.0.0",
     "jasmine-core": "~3.4.0"
   },
-  "dependencies": { "dtslint": "^0.9.0", "tslint-config-prettier": "^1.18.0" }
+  "dependencies": {
+    "tslint-config-prettier": "^1.18.0"
+  }
 }
