@@ -53,6 +53,7 @@ class SecondaryModule {}
 class MainModule {}
 
 describe("precompileForTests()", () => {
+  // tslint:disable-next-line:deprecation
   precompileForTests([MainModule]);
 
   async function initComponent() {
@@ -81,8 +82,8 @@ describe("precompileForTests()", () => {
   for (let i = 0; i < 3; ++i) {
     it(`allows clearing service state between tests, iteration ${i}`, async () => {
       const fixture = await initComponent();
-      const providedInRoot = TestBed.get(ProvidedInRoot);
-      const providedInModule = TestBed.get(ProvidedInModule);
+      const providedInRoot = TestBed.inject(ProvidedInRoot);
+      const providedInModule = TestBed.inject(ProvidedInModule);
 
       ++providedInRoot.counter;
       ++providedInModule.counter;
