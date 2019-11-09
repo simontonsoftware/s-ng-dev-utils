@@ -1,4 +1,5 @@
 import { CompileMetadataResolver } from "@angular/compiler";
+import { InjectFlags } from "@angular/core";
 import { TestBed } from "@angular/core/testing";
 import {
   BrowserDynamicTestingModule,
@@ -25,16 +26,24 @@ import {
  * ```
  *
  * Note that this uses `TestBed.initTestEnvironment` to set up the precompiled components, so you will not be able to use it yourself at the same time.
+ *
+ * @deprecated This is incompatible with Ivy. (https://github.com/angular/angular/commit/11325bad4ab786a07e52ff380c00622fda11c0b7)
  */
 export function precompileForTests(modules: any[], skipModules: any[] = []) {
   beforeAll(async () => {
+    // technique modeled from https://github.com/angular/angular/blob/11325bad4ab786a07e52ff380c00622fda11c0b7/packages/core/test/linker/jit_summaries_integration_spec.ts#L83
+    const metadataResolver = TestBed.inject(
+      CompileMetadataResolver,
+      null,
+      InjectFlags.Optional,
+    );
+    if (!metadataResolver) {
+      console.error(`precompileForTests() does not work with Ivy. Skipping.`);
+      return;
+    }
+
     TestBed.configureTestingModule({ imports: modules });
     await TestBed.compileComponents();
-
-    // technique modeled from https://github.com/angular/angular/blob/11325bad4ab786a07e52ff380c00622fda11c0b7/packages/core/test/linker/jit_summaries_integration_spec.ts#L83
-    const metadataResolver = TestBed.get(
-      CompileMetadataResolver,
-    ) as CompileMetadataResolver;
 
     TestBed.resetTestEnvironment();
     TestBed.initTestEnvironment(
