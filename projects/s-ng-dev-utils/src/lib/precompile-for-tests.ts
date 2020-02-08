@@ -27,7 +27,7 @@ import {
  *
  * Note that this uses `TestBed.initTestEnvironment` to set up the precompiled components, so you will not be able to use it yourself at the same time.
  *
- * @deprecated This is incompatible with Ivy. (https://github.com/angular/angular/commit/11325bad4ab786a07e52ff380c00622fda11c0b7)
+ * @deprecated This is no longer needed with Ivy.
  */
 export function precompileForTests(modules: any[], skipModules: any[] = []) {
   beforeAll(async () => {
@@ -38,7 +38,9 @@ export function precompileForTests(modules: any[], skipModules: any[] = []) {
       InjectFlags.Optional,
     );
     if (!metadataResolver) {
-      console.error(`precompileForTests() does not work with Ivy. Skipping.`);
+      console.error(
+        `precompileForTests() is no longer needed with Ivy. Skipping.`,
+      );
       return;
     }
 
@@ -55,6 +57,7 @@ export function precompileForTests(modules: any[], skipModules: any[] = []) {
   });
 }
 
+/** @hidden */
 function extractAotSummaries(
   metadataResolver: CompileMetadataResolver,
   modules: any[],
@@ -65,6 +68,7 @@ function extractAotSummaries(
   );
 }
 
+/** @hidden */
 function extractAotSummaries0(
   metadataResolver: CompileMetadataResolver,
   module: any,
