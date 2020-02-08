@@ -17,8 +17,10 @@
     "typeRoots": ["node_modules/@types"],
     "lib": ["es2018", "dom"],
     "paths": {
-      "s-ng-dev-utils": ["dist/s-ng-dev-utils"],
-      "s-ng-dev-utils/*": ["dist/s-ng-dev-utils/*"]
+      "s-ng-dev-utils": [
+        "dist/s-ng-dev-utils/s-ng-dev-utils",
+        "dist/s-ng-dev-utils"
+      ]
     },
 
     //
