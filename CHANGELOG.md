@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.10.0...v1.0.0) (2020-02-08)
+
+### ⚠ BREAKING CHANGES
+
+- requires angular 9 & friends
+
+### Features
+
+- upgrade to angular 9 ([e12dce3](https://github.com/simontonsoftware/s-ng-dev-utils/commit/e12dce37c8f9756132f28ec6ccb9b6a511db1947))
+
+### Bug Fixes
+
+- deprecate `precompileForTests()` and make it a no-op with Ivy ([9068557](https://github.com/simontonsoftware/s-ng-dev-utils/commit/9068557ea0d151dc2b71572649a1049122bb62b2))
+
 ## [0.10.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.9.0...v0.10.0) (2019-07-20)
 
 ### Features
