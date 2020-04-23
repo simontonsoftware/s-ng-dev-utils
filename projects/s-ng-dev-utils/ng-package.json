@@ -4,5 +4,10 @@
   "lib": {
     "entryFile": "src/public-api.ts"
   },
-  "whitelistedNonPeerDependencies": ["tslint-config-prettier"]
+  "whitelistedNonPeerDependencies": [
+    "@typescript-eslint/eslint-plugin",
+    "@typescript-eslint/parser",
+    "eslint",
+    "tslint-config-prettier"
+  ]
 }
