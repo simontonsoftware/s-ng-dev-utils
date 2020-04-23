@@ -1,0 +1,7 @@
+/.idea/
+/coverage/
+/dist/
+/docs/
+/node_modules/
+
+karma.conf.js

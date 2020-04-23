@@ -1,4 +1,7 @@
-import { CompileMetadataResolver } from "@angular/compiler";
+import {
+  CompileMetadataResolver,
+  CompileNgModuleMetadata,
+} from "@angular/compiler";
 import { InjectFlags } from "@angular/core";
 import { TestBed } from "@angular/core/testing";
 import {
@@ -82,21 +85,40 @@ function extractAotSummaries0(
   const moduleMetadata = metadataResolver.getNgModuleMetadata(module)!;
   return [
     metadataResolver.getNgModuleSummary(module),
-    () =>
-      moduleMetadata.declaredDirectives.map((directive) =>
-        metadataResolver.getDirectiveSummary(directive.reference),
-      ),
-    () =>
-      moduleMetadata.declaredPipes.map((pipe) =>
-        metadataResolver.getPipeSummary(pipe.reference),
-      ),
+    () => extractDirectives(moduleMetadata, metadataResolver),
+    () => extractPipes(moduleMetadata, metadataResolver),
     () =>
       extractAotSummaries(
         metadataResolver,
-        moduleMetadata.importedModules.map(
-          (importedModule) => importedModule.type.reference,
-        ),
+        extractImports(moduleMetadata),
         skipModules,
       ),
   ];
+}
+
+/** @hidden */
+function extractDirectives(
+  moduleMetadata: CompileNgModuleMetadata,
+  metadataResolver: CompileMetadataResolver,
+) {
+  return moduleMetadata.declaredDirectives.map((directive) =>
+    metadataResolver.getDirectiveSummary(directive.reference),
+  );
+}
+
+/** @hidden */
+function extractPipes(
+  moduleMetadata: CompileNgModuleMetadata,
+  metadataResolver: CompileMetadataResolver,
+) {
+  return moduleMetadata.declaredPipes.map((pipe) =>
+    metadataResolver.getPipeSummary(pipe.reference),
+  );
+}
+
+/** @hidden */
+function extractImports(moduleMetadata: CompileNgModuleMetadata) {
+  return moduleMetadata.importedModules.map(
+    (importedModule) => importedModule.type.reference,
+  );
 }

@@ -5,14 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "postbuild": "cpx \"tslint*.json\" dist/s-ng-dev-utils/",
+    "postbuild": "cpx \"{tslint*.json,.eslintrc.js}\" dist/s-ng-dev-utils/",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint && eslint . --ext .js,.jsx,.ts,.tsx",
     "e2e": "ng e2e",
     "dtslint": "dtslint --expectOnly --localTs node_modules/typescript/lib projects/s-ng-dev-utils/src/typing-tests",
     "docs": "cd docs && typedoc ../projects/s-ng-dev-utils/src/lib",
     "prettier-all": "prettier --write \"**/*.{html,js,json,md,scss,ts,yml}\"",
-    "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build s-ng-dev-utils"
+    "release": "yarn docs && git add docs/* && standard-version --commit-all && yarn build --prod s-ng-dev-utils"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +24,9 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "tslint-config-prettier": "^1.18.0",

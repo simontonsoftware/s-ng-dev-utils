@@ -16,7 +16,6 @@
     //
     // Simonton Software additions
     //
-    "enableIvy": false,
     "strictTemplates": true
   },
   "exclude": ["src/test.ts", "**/*.spec.ts"]
