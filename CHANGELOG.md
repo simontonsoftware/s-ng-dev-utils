@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.0.0...v1.1.0) (2020-04-23)
+
+### Features
+
+- include eslint config for code complexity & length ([af67635](https://github.com/simontonsoftware/s-ng-dev-utils/commit/af676352652fa3d1063b5a0ec6f93c41d5d66228))
+
 ## [1.0.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v0.10.0...v1.0.0) (2020-02-08)
 
 ### ⚠ BREAKING CHANGES
