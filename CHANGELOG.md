@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.1.1...v1.1.2) (2020-04-23)
+
+### Bug Fixes
+
+- turn off more length rules for spec files ([afa4680](https://github.com/simontonsoftware/s-ng-dev-utils/commit/afa4680fa729318641f5197cd6fc59f804a40a39))
+
 ### [1.1.1](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.1.0...v1.1.1) (2020-04-23)
 
 ### Bug Fixes
