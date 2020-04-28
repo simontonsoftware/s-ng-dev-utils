@@ -17,15 +17,4 @@ module.exports = {
     "max-nested-callbacks": ["error", { max: 2 }],
     "max-statements": ["error"],
   },
-  overrides: [
-    {
-      files: ["*.spec.ts"],
-      rules: {
-        "max-lines": ["off"],
-        "max-lines-per-function": ["off"],
-        "max-nested-callbacks": ["off"],
-        "max-statements": ["off"],
-      },
-    },
-  ],
 };

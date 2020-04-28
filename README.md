@@ -44,6 +44,7 @@ This library comes with configuration to lint code complexity and length using E
    /docs/
    /node_modules/
    karma.conf.js
+   *.spec.ts
    ```
 
 1. Modify your `package.json`'s lint script to include ESLint:
