@@ -889,6 +889,9 @@ img { max-width: 100%; }
 		<li class=" tsd-kind-function">
 			<a href="index.html#precompilefortests" class="tsd-kind-icon">precompile<wbr>For<wbr>Tests</a>
 		</li>
+		<li class=" tsd-kind-function">
+			<a href="index.html#trimleftoverstyles" class="tsd-kind-icon">trim<wbr>Leftover<wbr>Styles</a>
+		</li>
 	</ul>
 </nav>
 <div class="container container-main">
@@ -905,6 +908,7 @@ img { max-width: 100%; }
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#expecttype" class="tsd-kind-icon">expect<wbr>Type</a></li>
 							<li class="tsd-kind-function tsd-has-type-parameter"><a href="index.html#marbletest" class="tsd-kind-icon">marble<wbr>Test</a></li>
 							<li class="tsd-kind-function"><a href="index.html#precompilefortests" class="tsd-kind-icon">precompile<wbr>For<wbr>Tests</a></li>
+							<li class="tsd-kind-function"><a href="index.html#trimleftoverstyles" class="tsd-kind-icon">trim<wbr>Leftover<wbr>Styles</a></li>
 						</ul>
 					</section>
 				</div>
@@ -1062,6 +1066,31 @@ describe(<span class="hljs-string">"AppComponent"</span>, <span class="hljs-func
 								<dd><p>This is no longer needed with Ivy.</p>
 								</dd>
 							</dl>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-function">
+				<a name="trimleftoverstyles" class="tsd-anchor"></a>
+				<h3>trim<wbr>Leftover<wbr>Styles</h3>
+				<ul class="tsd-signatures tsd-kind-function">
+					<li class="tsd-signature tsd-kind-icon">trim<wbr>Leftover<wbr>Styles<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/simontonsoftware/s-ng-dev-utils/blob/master/projects/s-ng-dev-utils/src/lib/trim-leftover-styles.ts#L15">trim-leftover-styles.ts:15</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>When called at the right times, this speeds up your test suite by removing <code>&lt;script&gt;</code> tags that Angular component tests leave in the DOM. By default Angular dynamically adds <code>&lt;script&gt;</code> tags into the <code>&lt;head&gt;</code> of the document corresponding to component styles. In Jasmine tests they are never cleaned up. This can cause hundreds or even thousands of style tags to accumulate, making component tests slow down as your test suite runs. In Chrome debugger&#39;s performance tab, this time will show up under the activity &quot;Recalculate Style&quot;.</p>
+							</div>
+							<p>The first time this function is called it memorizes the <code>&lt;script&gt;</code> tags in the DOM, then each time it is called after it removes any that appeared since. A simple way to use this effectively is to call it in a <code>beforeEach()</code>.</p>
+							<pre><code class="language-ts">beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  trimLeftoverStyles();
+});</code></pre>
 						</div>
 					</li>
 				</ul>

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.1.2...v1.2.0) (2020-05-09)
+
+### Features
+
+- add `trimLeftoverStyles()` ([7fe8373](https://github.com/simontonsoftware/s-ng-dev-utils/commit/7fe8373c9d7121f27347cdd07d381aa40301eee7))
+
 ### [1.1.2](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.1.1...v1.1.2) (2020-04-23)
 
 ### Bug Fixes
