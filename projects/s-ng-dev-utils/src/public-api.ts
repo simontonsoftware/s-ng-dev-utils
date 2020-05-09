@@ -7,3 +7,4 @@ export { expectSingleCallAndReset } from "./lib/expect-single-call-and-reset";
 export { expectType } from "./lib/expect-type";
 export { marbleTest } from "./lib/marble-test";
 export { precompileForTests } from "./lib/precompile-for-tests";
+export { trimLeftoverStyles } from "./lib/trim-leftover-styles";

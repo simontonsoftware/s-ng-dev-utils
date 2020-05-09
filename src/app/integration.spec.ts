@@ -4,6 +4,7 @@ import {
   expectType,
   marbleTest,
   precompileForTests,
+  trimLeftoverStyles,
 } from "s-ng-dev-utils";
 
 describe("s-ng-dev-utils", () => {
@@ -36,5 +37,9 @@ describe("s-ng-dev-utils", () => {
     it("exists", () => {
       expect().nothing();
     });
+  });
+
+  it("has trimLeftoverStyles()", () => {
+    trimLeftoverStyles();
   });
 });
