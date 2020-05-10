@@ -1,4 +1,5 @@
 import {
+  createSpyObject,
   expectCallsAndReset,
   expectSingleCallAndReset,
   expectType,
@@ -8,6 +9,10 @@ import {
 } from "s-ng-dev-utils";
 
 describe("s-ng-dev-utils", () => {
+  it("has createSpyObject()", () => {
+    createSpyObject(Date);
+  });
+
   it("has expectCallsAndReset()", () => {
     const spy = jasmine.createSpy();
     spy();

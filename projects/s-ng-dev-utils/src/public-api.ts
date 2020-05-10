@@ -2,6 +2,7 @@
  * Public API Surface of s-ng-dev-utils
  */
 
+export { createSpyObject } from "./lib/create-spy-object";
 export { expectCallsAndReset } from "./lib/expect-calls-and-reset";
 export { expectSingleCallAndReset } from "./lib/expect-single-call-and-reset";
 export { expectType } from "./lib/expect-type";
