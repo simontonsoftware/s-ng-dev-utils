@@ -3,6 +3,7 @@ import {
   expectCallsAndReset,
   expectSingleCallAndReset,
   expectType,
+  logTimers,
   marbleTest,
   precompileForTests,
   trimLeftoverStyles,
@@ -27,6 +28,10 @@ describe("s-ng-dev-utils", () => {
 
   it("has expectType()", () => {
     expectType<number>(0);
+  });
+
+  it("has logTimers()", () => {
+    logTimers();
   });
 
   it(
