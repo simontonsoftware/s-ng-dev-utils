@@ -1,4 +1,4 @@
-import { expectSingleCallAndReset } from "../public-api";
+import { expectSingleCallAndReset } from "../../public-api";
 import { createSpyObject } from "./create-spy-object";
 
 class Superclass {

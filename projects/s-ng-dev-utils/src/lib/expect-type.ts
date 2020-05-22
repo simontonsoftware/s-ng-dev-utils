@@ -5,6 +5,8 @@
  * expectType<number>(performance.now());
  * expectType<string, NodeJS.Platform>();
  * ```
+ *
+ * @deprecated Try [dtslint](https://github.com/Microsoft/dtslint) or [tsd](https://github.com/SamVerschueren/tsd).
  */
 
 export function expectType<Expected, Actual extends Expected>(): void;
