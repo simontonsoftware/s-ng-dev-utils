@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.2.0...v2.0.0) (2020-06-26)
+
+### ⚠ BREAKING CHANGES
+
+- removed deprecated `expectType()`
+- requires angular 10
+- requires typescript 3.9
+
+### Features
+
+- add `createSpyObject()` ([47eaae8](https://github.com/simontonsoftware/s-ng-dev-utils/commit/47eaae89d598f8fd776825dbffb400dabfe1910a))
+- add `logTimers()` ([7d7781a](https://github.com/simontonsoftware/s-ng-dev-utils/commit/7d7781a3cc67d0e7cf0470dbefafb4b15d758fd2))
+- upgrade angular ([464bbb8](https://github.com/simontonsoftware/s-ng-dev-utils/commit/464bbb8932f3ead8b130d74c13ef44063e6d2ee8))
+
+* remove `expectType()` ([de44c46](https://github.com/simontonsoftware/s-ng-dev-utils/commit/de44c46008d2b6588b7efbe1d8756dc1b20b6ead))
+
 ## [1.2.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.1.2...v1.2.0) (2020-05-09)
 
 ### Features
