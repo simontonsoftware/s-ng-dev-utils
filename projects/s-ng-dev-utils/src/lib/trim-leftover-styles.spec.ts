@@ -1,14 +1,14 @@
-import { Component } from "@angular/core";
-import { TestBed } from "@angular/core/testing";
-import { trimLeftoverStyles } from "./trim-leftover-styles";
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { trimLeftoverStyles } from './trim-leftover-styles';
 
-describe("trimLeftoverStyles()", () => {
+describe('trimLeftoverStyles()', () => {
   function getStyles() {
-    return Array.from(document.querySelectorAll("style"));
+    return Array.from(document.querySelectorAll('style'));
   }
 
-  it("removes (only) styles auto-added by components", () => {
-    document.head.append(document.createElement("style"));
+  it('removes (only) styles auto-added by components', () => {
+    document.head.append(document.createElement('style'));
     const startingStyles = getStyles();
     expect(startingStyles.length).toBeGreaterThan(0);
     trimLeftoverStyles();

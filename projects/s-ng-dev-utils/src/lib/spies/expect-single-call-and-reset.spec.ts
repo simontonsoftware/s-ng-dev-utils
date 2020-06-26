@@ -1,17 +1,17 @@
-import { expectSingleCallAndReset } from "./expect-single-call-and-reset";
+import { expectSingleCallAndReset } from './expect-single-call-and-reset';
 
-describe("expectSingleCallAndReset()", () => {
-  it("matches arguments", () => {
+describe('expectSingleCallAndReset()', () => {
+  it('matches arguments', () => {
     const spy = jasmine.createSpy();
 
-    spy("a thing", "or two");
-    expectSingleCallAndReset(spy, "a thing", "or two");
+    spy('a thing', 'or two');
+    expectSingleCallAndReset(spy, 'a thing', 'or two');
 
     spy();
     expectSingleCallAndReset(spy);
   });
 
-  it("resets the spy", () => {
+  it('resets the spy', () => {
     const spy = jasmine.createSpy();
 
     spy();

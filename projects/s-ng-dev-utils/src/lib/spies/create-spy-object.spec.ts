@@ -1,39 +1,39 @@
-import { expectSingleCallAndReset } from "../../public-api";
-import { createSpyObject } from "./create-spy-object";
+import { expectSingleCallAndReset } from '../../public-api';
+import { createSpyObject } from './create-spy-object';
 
 class Superclass {
   a() {
-    return "return a";
+    return 'return a';
   }
 
   b() {
-    return "return b";
+    return 'return b';
   }
 }
 
 class Subclass extends Superclass {
   b() {
-    return "override b";
+    return 'override b';
   }
 
   c(arg: string) {
-    return "received " + arg;
+    return 'received ' + arg;
   }
 }
 
-describe("createSpyObject()", () => {
-  it("mocks methods up the class hierarchy", () => {
+describe('createSpyObject()', () => {
+  it('mocks methods up the class hierarchy', () => {
     const obj = createSpyObject(Subclass);
-    obj.a.and.returnValue("stubbed a");
-    obj.b.and.returnValue("stubbed b");
-    obj.c("my arg");
+    obj.a.and.returnValue('stubbed a');
+    obj.b.and.returnValue('stubbed b');
+    obj.c('my arg');
 
-    expect(obj.a()).toBe("stubbed a");
-    expect(obj.b()).toBe("stubbed b");
-    expectSingleCallAndReset(obj.c, "my arg");
+    expect(obj.a()).toBe('stubbed a');
+    expect(obj.b()).toBe('stubbed b');
+    expectSingleCallAndReset(obj.c, 'my arg');
   });
 
-  it("works for the example in the docs", () => {
+  it('works for the example in the docs', () => {
     class Greeter {
       greet(name: string) {
         return `Hello, ${name}!`;
@@ -41,8 +41,8 @@ describe("createSpyObject()", () => {
     }
 
     const spyObject = createSpyObject(Greeter);
-    spyObject.greet.and.returnValue("Hello, stub!");
-    expect(spyObject.greet("Eric")).toBe("Hello, stub!");
-    expectSingleCallAndReset(spyObject.greet, "Eric");
+    spyObject.greet.and.returnValue('Hello, stub!');
+    expect(spyObject.greet('Eric')).toBe('Hello, stub!');
+    expectSingleCallAndReset(spyObject.greet, 'Eric');
   });
 });

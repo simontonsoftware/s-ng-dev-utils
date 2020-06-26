@@ -1,11 +1,11 @@
-import { expectCallsAndReset } from "./expect-calls-and-reset";
+import { expectCallsAndReset } from './expect-calls-and-reset';
 
-describe("expectCallsAndReset()", () => {
-  it("matches arguments", () => {
+describe('expectCallsAndReset()', () => {
+  it('matches arguments', () => {
     const spy = jasmine.createSpy();
 
-    spy("a thing", "or two");
-    expectCallsAndReset(spy, ["a thing", "or two"]);
+    spy('a thing', 'or two');
+    expectCallsAndReset(spy, ['a thing', 'or two']);
 
     spy();
     expectCallsAndReset(spy, []);
@@ -16,7 +16,7 @@ describe("expectCallsAndReset()", () => {
     expectCallsAndReset(spy, [1], [2], [3, 4]);
   });
 
-  it("resets the spy", () => {
+  it('resets the spy', () => {
     const spy = jasmine.createSpy();
 
     spy();

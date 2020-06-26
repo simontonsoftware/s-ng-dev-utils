@@ -1,4 +1,4 @@
-import { TestScheduler } from "rxjs/testing";
+import { TestScheduler } from 'rxjs/testing';
 
 /** @hidden */
 // including this file in a build caused an error without this
@@ -9,7 +9,7 @@ declare global {
 }
 
 /** @hidden */
-type Run = Parameters<TestScheduler["run"]>[0];
+type Run = Parameters<TestScheduler['run']>[0];
 /** @hidden */
 type Helpers = Parameters<Run>[0];
 /** @hidden */

@@ -1,5 +1,5 @@
-import { isFunction } from "./is-function";
-import { keys } from "./keys";
+import { isFunction } from './is-function';
+import { keys } from './keys';
 
 /**
  * Creates an array of function property names from own enumerable properties of `object`.
@@ -10,6 +10,6 @@ import { keys } from "./keys";
  */
 export function functions<T extends object>(obj: T) {
   return keys(obj).filter(
-    (key) => key !== "constructor" && isFunction(obj[key as keyof T]),
+    (key) => key !== 'constructor' && isFunction(obj[key as keyof T]),
   );
 }

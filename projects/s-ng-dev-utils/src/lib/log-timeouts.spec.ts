@@ -1,22 +1,22 @@
-import { discardPeriodicTasks, fakeAsync, tick } from "@angular/core/testing";
-import { expectSingleCallAndReset } from "../public-api";
-import { logTimers } from "./log-timers";
+import { discardPeriodicTasks, fakeAsync, tick } from '@angular/core/testing';
+import { expectSingleCallAndReset } from '../public-api';
+import { logTimers } from './log-timers';
 
-describe("logTimers()", () => {
-  it("prints each timeout call to `console.log`", fakeAsync(() => {
-    const logSpy = spyOn(console, "log");
+describe('logTimers()', () => {
+  it('prints each timeout call to `console.log`', fakeAsync(() => {
+    const logSpy = spyOn(console, 'log');
     const stopLogging = logTimers();
 
     setTimeout(myFunction);
-    expectSingleCallAndReset(logSpy, "setTimeout(", myFunction, ")");
+    expectSingleCallAndReset(logSpy, 'setTimeout(', myFunction, ')');
 
     setTimeout(myDelayedFunction, 1000);
     expectSingleCallAndReset(
       logSpy,
-      "setTimeout(",
+      'setTimeout(',
       myDelayedFunction,
       1000,
-      ")",
+      ')',
     );
 
     tick(1000);
@@ -27,20 +27,20 @@ describe("logTimers()", () => {
     function myDelayedFunction() {}
   }));
 
-  it("prints each interval call to `console.log`", fakeAsync(() => {
-    const logSpy = spyOn(console, "log");
+  it('prints each interval call to `console.log`', fakeAsync(() => {
+    const logSpy = spyOn(console, 'log');
     const stopLogging = logTimers();
 
     setInterval(myFunction);
-    expectSingleCallAndReset(logSpy, "setInterval(", myFunction, ")");
+    expectSingleCallAndReset(logSpy, 'setInterval(', myFunction, ')');
 
     setInterval(myDelayedFunction, 1000);
     expectSingleCallAndReset(
       logSpy,
-      "setInterval(",
+      'setInterval(',
       myDelayedFunction,
       1000,
-      ")",
+      ')',
     );
 
     discardPeriodicTasks();
@@ -51,8 +51,8 @@ describe("logTimers()", () => {
     function myDelayedFunction() {}
   }));
 
-  it("returns a function to stop the logging", () => {
-    const logSpy = spyOn(console, "log");
+  it('returns a function to stop the logging', () => {
+    const logSpy = spyOn(console, 'log');
 
     const stopLogging = logTimers();
     stopLogging();

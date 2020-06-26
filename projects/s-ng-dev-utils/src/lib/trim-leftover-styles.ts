@@ -13,7 +13,7 @@ let initialStyles: Set<HTMLStyleElement> | undefined;
  * ```
  */
 export function trimLeftoverStyles() {
-  const styles = new Set(Array.from(document.querySelectorAll("style")));
+  const styles = new Set(Array.from(document.querySelectorAll('style')));
   if (initialStyles) {
     for (const style of styles) {
       if (!initialStyles.has(style)) {

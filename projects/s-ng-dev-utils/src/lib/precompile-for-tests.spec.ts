@@ -4,12 +4,12 @@ import {
   NgModule,
   Pipe,
   PipeTransform,
-} from "@angular/core";
-import { TestBed } from "@angular/core/testing";
-import { BrowserModule } from "@angular/platform-browser";
-import { precompileForTests } from "./precompile-for-tests";
+} from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { precompileForTests } from './precompile-for-tests';
 
-@Injectable({ providedIn: "root" })
+@Injectable({ providedIn: 'root' })
 class ProvidedInRoot {
   counter = 0;
 }
@@ -24,10 +24,10 @@ class ProvidedInComponent {
   counter = 0;
 }
 
-@Pipe({ name: "excited" })
+@Pipe({ name: 'excited' })
 class ExcitedPipe implements PipeTransform {
   transform(value: any) {
-    return value.toString() + "!";
+    return value.toString() + '!';
   }
 }
 
@@ -52,7 +52,7 @@ class SecondaryModule {}
 })
 class MainModule {}
 
-describe("precompileForTests()", () => {
+describe('precompileForTests()', () => {
   // tslint:disable-next-line:deprecation
   precompileForTests([MainModule]);
 
@@ -66,17 +66,17 @@ describe("precompileForTests()", () => {
 
   /////////
 
-  it("allows components", async () => {
+  it('allows components', async () => {
     const fixture = await initComponent();
-    expect(fixture.nativeElement.textContent).toContain("I exist!");
+    expect(fixture.nativeElement.textContent).toContain('I exist!');
   });
 
-  it("allows declaring only a component", async () => {
+  it('allows declaring only a component', async () => {
     TestBed.configureTestingModule({ declarations: [AComponent, ExcitedPipe] });
     await TestBed.compileComponents();
     const fixture = TestBed.createComponent(AComponent);
     fixture.detectChanges();
-    expect(fixture.nativeElement.textContent).toContain("I exist!");
+    expect(fixture.nativeElement.textContent).toContain('I exist!');
   });
 
   for (let i = 0; i < 3; ++i) {
@@ -90,7 +90,7 @@ describe("precompileForTests()", () => {
 
       expect(providedInRoot.counter).toBe(1);
       expect(providedInModule.counter).toBe(1);
-      expect(fixture.nativeElement.textContent).toContain("Created 1 time(s).");
+      expect(fixture.nativeElement.textContent).toContain('Created 1 time(s).');
     });
   }
 });

@@ -1,4 +1,4 @@
-import { marbleTest } from "../lib/marble-test";
+import { marbleTest } from '../lib/marble-test';
 
 // $ExpectType () => void
 marbleTest(() => {});

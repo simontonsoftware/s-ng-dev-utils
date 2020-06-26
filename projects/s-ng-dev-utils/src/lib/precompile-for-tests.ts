@@ -1,13 +1,13 @@
 import {
   CompileMetadataResolver,
   CompileNgModuleMetadata,
-} from "@angular/compiler";
-import { InjectFlags } from "@angular/core";
-import { TestBed } from "@angular/core/testing";
+} from '@angular/compiler';
+import { InjectFlags } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting,
-} from "@angular/platform-browser-dynamic/testing";
+} from '@angular/platform-browser-dynamic/testing';
 
 /**
  * Use this to speed up your angular test suite. Normally when you call `TestBed.compileComponents()`, it recompiles all the configured components even if it has compiled them before in a previous test. AoT compilation would be a great fix, but is not well supported/documented for tests yet. This function fills the gap by precompiling the components as if by AoT and setting up `TestBed` to use them.
