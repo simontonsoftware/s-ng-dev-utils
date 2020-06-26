@@ -2,54 +2,49 @@ import {
   createSpyObject,
   expectCallsAndReset,
   expectSingleCallAndReset,
-  expectType,
   logTimers,
   marbleTest,
   precompileForTests,
   trimLeftoverStyles,
-} from "s-ng-dev-utils";
+} from 's-ng-dev-utils';
 
-describe("s-ng-dev-utils", () => {
-  it("has createSpyObject()", () => {
+describe('s-ng-dev-utils', () => {
+  it('has createSpyObject()', () => {
     createSpyObject(Date);
   });
 
-  it("has expectCallsAndReset()", () => {
+  it('has expectCallsAndReset()', () => {
     const spy = jasmine.createSpy();
     spy();
     expectCallsAndReset(spy, []);
   });
 
-  it("has expectSingleCallAndReset()", () => {
+  it('has expectSingleCallAndReset()', () => {
     const spy = jasmine.createSpy();
     spy();
     expectSingleCallAndReset(spy);
   });
 
-  it("has expectType()", () => {
-    expectType<number>(0);
-  });
-
-  it("has logTimers()", () => {
+  it('has logTimers()', () => {
     logTimers();
   });
 
   it(
-    "has marbleTest",
+    'has marbleTest',
     marbleTest(({ cold, expectObservable }) => {
-      expectObservable(cold("|")).toBe("|");
+      expectObservable(cold('|')).toBe('|');
     }),
   );
 
-  describe("precompileForTests()", () => {
+  describe('precompileForTests()', () => {
     precompileForTests([]);
 
-    it("exists", () => {
+    it('exists', () => {
       expect().nothing();
     });
   });
 
-  it("has trimLeftoverStyles()", () => {
+  it('has trimLeftoverStyles()', () => {
     trimLeftoverStyles();
   });
 });
