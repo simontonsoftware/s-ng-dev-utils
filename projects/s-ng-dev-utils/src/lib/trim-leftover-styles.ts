@@ -12,7 +12,7 @@ let initialStyles: Set<HTMLStyleElement> | undefined;
  * });
  * ```
  */
-export function trimLeftoverStyles() {
+export function trimLeftoverStyles(): void {
   const styles = new Set(Array.from(document.querySelectorAll('style')));
   if (initialStyles) {
     for (const style of styles) {

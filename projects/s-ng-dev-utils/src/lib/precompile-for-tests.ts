@@ -2,7 +2,7 @@ import {
   CompileMetadataResolver,
   CompileNgModuleMetadata,
 } from '@angular/compiler';
-import { InjectFlags } from '@angular/core';
+import { AbstractType, InjectFlags, InjectionToken, Type } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import {
   BrowserDynamicTestingModule,
@@ -32,16 +32,15 @@ import {
  *
  * @deprecated This is no longer needed with Ivy.
  */
-export function precompileForTests(modules: any[], skipModules: any[] = []) {
+export function precompileForTests(
+  modules: any[],
+  skipModules: any[] = [],
+): void {
   beforeAll(async () => {
     // technique modeled from https://github.com/angular/angular/blob/11325bad4ab786a07e52ff380c00622fda11c0b7/packages/core/test/linker/jit_summaries_integration_spec.ts#L83
-    const metadataResolver = TestBed.inject(
-      CompileMetadataResolver,
-      null,
-      InjectFlags.Optional,
-    );
+    const metadataResolver = optionallyInject(CompileMetadataResolver);
     if (!metadataResolver) {
-      console.error(
+      console.warn(
         `precompileForTests() is no longer needed with Ivy. Skipping.`,
       );
       return;
@@ -60,6 +59,14 @@ export function precompileForTests(modules: any[], skipModules: any[] = []) {
   });
 }
 
+// TODO: this could be a public function
+/** @hidden */
+function optionallyInject<T>(
+  token: Type<T> | InjectionToken<T> | AbstractType<T>,
+): T | null {
+  return TestBed.inject(token, null, InjectFlags.Optional);
+}
+
 /** @hidden */
 function extractAotSummaries(
   metadataResolver: CompileMetadataResolver,
@@ -76,7 +83,7 @@ function extractAotSummaries0(
   metadataResolver: CompileMetadataResolver,
   module: any,
   skipModules: Set<any>,
-) {
+): any[] {
   if (skipModules.has(module)) {
     return [];
   }
@@ -100,7 +107,7 @@ function extractAotSummaries0(
 function extractDirectives(
   moduleMetadata: CompileNgModuleMetadata,
   metadataResolver: CompileMetadataResolver,
-) {
+): any[] {
   return moduleMetadata.declaredDirectives.map((directive) =>
     metadataResolver.getDirectiveSummary(directive.reference),
   );
@@ -110,14 +117,14 @@ function extractDirectives(
 function extractPipes(
   moduleMetadata: CompileNgModuleMetadata,
   metadataResolver: CompileMetadataResolver,
-) {
+): any[] {
   return moduleMetadata.declaredPipes.map((pipe) =>
     metadataResolver.getPipeSummary(pipe.reference),
   );
 }
 
 /** @hidden */
-function extractImports(moduleMetadata: CompileNgModuleMetadata) {
+function extractImports(moduleMetadata: CompileNgModuleMetadata): any[] {
   return moduleMetadata.importedModules.map(
     (importedModule) => importedModule.type.reference,
   );

@@ -1,3 +1,4 @@
+import { Cast } from './interfaces';
 import { isFunction } from './is-function';
 import { keys } from './keys';
 
@@ -8,7 +9,9 @@ import { keys } from './keys';
  * - Lodash: 3,486 bytes
  * - Micro-dash: 225 bytes
  */
-export function functions<T extends object>(obj: T) {
+export function functions<T extends object>(
+  obj: T,
+): Array<Cast<keyof T, string>> {
   return keys(obj).filter(
     (key) => key !== 'constructor' && isFunction(obj[key as keyof T]),
   );

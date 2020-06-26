@@ -3,7 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { trimLeftoverStyles } from './trim-leftover-styles';
 
 describe('trimLeftoverStyles()', () => {
-  function getStyles() {
+  function getStyles(): HTMLStyleElement[] {
     return Array.from(document.querySelectorAll('style'));
   }
 

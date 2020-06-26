@@ -2,21 +2,21 @@ import { expectSingleCallAndReset } from '../../public-api';
 import { createSpyObject } from './create-spy-object';
 
 class Superclass {
-  a() {
+  a(): string {
     return 'return a';
   }
 
-  b() {
+  b(): string {
     return 'return b';
   }
 }
 
 class Subclass extends Superclass {
-  b() {
+  b(): string {
     return 'override b';
   }
 
-  c(arg: string) {
+  c(arg: string): string {
     return 'received ' + arg;
   }
 }
@@ -35,7 +35,7 @@ describe('createSpyObject()', () => {
 
   it('works for the example in the docs', () => {
     class Greeter {
-      greet(name: string) {
+      greet(name: string): string {
         return `Hello, ${name}!`;
       }
     }

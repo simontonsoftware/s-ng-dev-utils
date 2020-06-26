@@ -10,7 +10,10 @@
  * expectCallsAndReset(spy, [1], [2, 3], []);
  * ```
  */
-export function expectCallsAndReset(spy: jasmine.Spy, ...allArgs: any[][]) {
+export function expectCallsAndReset(
+  spy: jasmine.Spy,
+  ...allArgs: any[][]
+): void {
   expect(spy).toHaveBeenCalledTimes(allArgs.length);
   expect(spy.calls.allArgs()).toEqual(allArgs);
   spy.calls.reset();

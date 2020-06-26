@@ -28,7 +28,7 @@ type Callback<T> = (
  * }));
  * ```
  */
-export function marbleTest<T>(callback: Callback<T>) {
+export function marbleTest<T>(callback: Callback<T>): () => T {
   const testScheduler = new TestScheduler((actual, expected) => {
     expect(actual).toEqual(expected);
   });

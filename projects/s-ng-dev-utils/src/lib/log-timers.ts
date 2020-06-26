@@ -17,14 +17,14 @@ import { wrapMethod } from '../to-replace/wrap-method';
  * }));
  * ```
  */
-export function logTimers() {
+export function logTimers(): () => void {
   const restoreTimeouts = wrapMethod(window, 'setTimeout', {
-    before(...args: any[]) {
+    before(...args: any[]): void {
       console.log('setTimeout(', ...args, ')');
     },
   }) as any;
   const restoreIntervals = wrapMethod(window, 'setInterval', {
-    before(...args: any[]) {
+    before(...args: any[]): void {
       console.log('setInterval(', ...args, ')');
     },
   }) as any;

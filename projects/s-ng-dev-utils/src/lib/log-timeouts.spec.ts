@@ -22,9 +22,9 @@ describe('logTimers()', () => {
     tick(1000);
     stopLogging();
 
-    function myFunction() {}
+    function myFunction(): void {}
 
-    function myDelayedFunction() {}
+    function myDelayedFunction(): void {}
   }));
 
   it('prints each interval call to `console.log`', fakeAsync(() => {
@@ -46,9 +46,9 @@ describe('logTimers()', () => {
     discardPeriodicTasks();
     stopLogging();
 
-    function myFunction() {}
+    function myFunction(): void {}
 
-    function myDelayedFunction() {}
+    function myDelayedFunction(): void {}
   }));
 
   it('returns a function to stop the logging', () => {
@@ -61,6 +61,6 @@ describe('logTimers()', () => {
     setInterval(myFunction);
     expect(logSpy).not.toHaveBeenCalled();
 
-    function myFunction() {}
+    function myFunction(): void {}
   });
 });

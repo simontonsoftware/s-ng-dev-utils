@@ -5,7 +5,7 @@ import {
   Pipe,
   PipeTransform,
 } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { precompileForTests } from './precompile-for-tests';
 
@@ -26,7 +26,7 @@ class ProvidedInComponent {
 
 @Pipe({ name: 'excited' })
 class ExcitedPipe implements PipeTransform {
-  transform(value: any) {
+  transform(value: any): string {
     return value.toString() + '!';
   }
 }
@@ -56,7 +56,7 @@ describe('precompileForTests()', () => {
   // tslint:disable-next-line:deprecation
   precompileForTests([MainModule]);
 
-  async function initComponent() {
+  async function initComponent(): Promise<ComponentFixture<AComponent>> {
     TestBed.configureTestingModule({ imports: [MainModule] });
     await TestBed.compileComponents();
     const fixture = TestBed.createComponent(AComponent);
