@@ -1,4 +1,5 @@
 import {
+  AngularContext,
   createSpyObject,
   expectCallsAndReset,
   expectSingleCallAndReset,
@@ -9,6 +10,10 @@ import {
 } from 's-ng-dev-utils';
 
 describe('s-ng-dev-utils', () => {
+  it('has AngularContext', () => {
+    expect(AngularContext).toBeDefined();
+  });
+
   it('has createSpyObject()', () => {
     createSpyObject(Date);
   });

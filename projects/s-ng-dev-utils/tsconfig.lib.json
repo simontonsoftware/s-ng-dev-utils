@@ -19,5 +19,5 @@
     //
     "strictTemplates": true
   },
-  "exclude": ["src/test.ts", "**/*.spec.ts"]
+  "exclude": ["src/test.ts", "src/test-polyfills.ts", "**/*.spec.ts"]
 }
