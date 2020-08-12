@@ -1,8 +1,15 @@
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { trimLeftoverStyles } from './trim-leftover-styles';
+import {
+  resetTrimLeftoverStyles,
+  trimLeftoverStyles,
+} from './trim-leftover-styles';
 
 describe('trimLeftoverStyles()', () => {
+  beforeEach(() => {
+    resetTrimLeftoverStyles();
+  });
+
   function getStyles(): HTMLStyleElement[] {
     return Array.from(document.querySelectorAll('style'));
   }

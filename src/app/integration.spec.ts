@@ -1,5 +1,6 @@
 import {
   AngularContext,
+  ComponentContext,
   createSpyObject,
   expectCallsAndReset,
   expectSingleCallAndReset,
@@ -12,6 +13,10 @@ import {
 describe('s-ng-dev-utils', () => {
   it('has AngularContext', () => {
     expect(AngularContext).toBeDefined();
+  });
+
+  it('has ComponentContext', () => {
+    expect(ComponentContext).toBeDefined();
   });
 
   it('has createSpyObject()', () => {

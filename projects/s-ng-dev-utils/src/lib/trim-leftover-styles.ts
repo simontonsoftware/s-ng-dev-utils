@@ -24,3 +24,8 @@ export function trimLeftoverStyles(): void {
     initialStyles = styles;
   }
 }
+
+/** @hidden */
+export function resetTrimLeftoverStyles(): void {
+  initialStyles = undefined;
+}

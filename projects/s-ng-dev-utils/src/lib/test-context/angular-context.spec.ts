@@ -6,6 +6,7 @@ import {
   ComponentFactoryResolver,
   DoCheck,
   Injectable,
+  InjectionToken,
   Injector,
 } from '@angular/core';
 import { TestBed, tick } from '@angular/core/testing';
@@ -13,36 +14,10 @@ import { noop, Observable } from 'rxjs';
 import { expectSingleCallAndReset } from '../spies';
 import { AngularContext } from './angular-context';
 
-@Injectable({ providedIn: 'root' })
-class MemoriesService {
-  constructor(private httpClient: HttpClient) {}
-
-  getLastYearToday(): Observable<any> {
-    const datetime = new Date();
-    datetime.setFullYear(datetime.getFullYear() - 1);
-    const date = datetime.toISOString().split('T')[0];
-    return this.httpClient.get(`http://example.com/post-from/${date}`);
-  }
-}
-
 describe('AngularContext', () => {
   let ctx: AngularContext;
   beforeEach(() => {
     ctx = new AngularContext();
-  });
-
-  it('sets up HttpClientTestingModule out of the box', () => {
-    // WARNING! This is the example in the docs. Keep it in sync.
-    ctx.startTime = new Date('2004-02-16T10:15:00.000Z');
-    ctx.run(() => {
-      const httpBackend = ctx.inject(HttpTestingController);
-      const myService = ctx.inject(MemoriesService);
-
-      myService.getLastYearToday().subscribe();
-
-      httpBackend.expectOne('http://example.com/post-from/2003-02-16');
-    });
-    expect().nothing();
   });
 
   describe('.startTime', () => {
@@ -57,6 +32,25 @@ describe('AngularContext', () => {
       const now = Date.now();
       ctx.run(() => {
         expect(Date.now()).toBeCloseTo(now, -1);
+      });
+    });
+  });
+
+  describe('constructor', () => {
+    it('accepts module metadata to be bootstrapped', () => {
+      const value = Symbol();
+      const token = new InjectionToken<symbol>('tok');
+      ctx = new AngularContext({
+        providers: [{ provide: token, useValue: value }],
+      });
+      ctx.run(() => {
+        expect(ctx.inject(token)).toBe(value);
+      });
+    });
+
+    it('sets up HttpClientTestingModule', () => {
+      ctx.run(() => {
+        expect(ctx.inject(HttpTestingController)).toBeDefined();
       });
     });
   });
@@ -184,6 +178,46 @@ describe('AngularContext', () => {
     it('discards periodic tasks', () => {
       ctx.run(() => {
         setInterval(noop, 10);
+      });
+      // The test is that it does _not_ give the error: "1 periodic timer(s) still in the queue."
+      expect().nothing();
+    });
+  });
+});
+
+describe('AngularContext class-level doc example', () => {
+  // This is the class we will test.
+  @Injectable({ providedIn: 'root' })
+  class MemoriesService {
+    constructor(private httpClient: HttpClient) {}
+
+    getLastYearToday(): Observable<any> {
+      const datetime = new Date();
+      datetime.setFullYear(datetime.getFullYear() - 1);
+      const date = datetime.toISOString().split('T')[0];
+      return this.httpClient.get(`http://example.com/post-from/${date}`);
+    }
+  }
+
+  describe('MemoriesService', () => {
+    // Tests should have exactly 1 variable outside an "it": `ctx`.
+    let ctx: AngularContext;
+    beforeEach(() => {
+      ctx = new AngularContext();
+    });
+
+    it('requests a post from 1 year ago', () => {
+      // Before calling `run`, set up any context variables this test needs.
+      ctx.startTime = new Date('2004-02-16T10:15:00.000Z');
+
+      // Pass the test itself as a callback to `run()`.
+      ctx.run(() => {
+        const httpBackend = ctx.inject(HttpTestingController);
+        const myService = ctx.inject(MemoriesService);
+
+        myService.getLastYearToday().subscribe();
+
+        httpBackend.expectOne('http://example.com/post-from/2003-02-16');
       });
       expect().nothing();
     });
