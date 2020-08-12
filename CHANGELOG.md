@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v2.0.0...v2.1.0) (2020-08-12)
+
+### Features
+
+- add `AngularContext` ([61a30bf](https://github.com/simontonsoftware/s-ng-dev-utils/commit/61a30bf9ad6fb8c13967dd9292a908367383c9a3))
+- add `ComponentContext` ([7e04f11](https://github.com/simontonsoftware/s-ng-dev-utils/commit/7e04f11990eed2b828d0188f10581c8d7716e402))
+
 ## [2.0.0](https://github.com/simontonsoftware/s-ng-dev-utils/compare/v1.2.0...v2.0.0) (2020-06-26)
 
 ### ⚠ BREAKING CHANGES
